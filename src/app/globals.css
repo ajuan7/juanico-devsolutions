@@ -5,12 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #0E0E0E;
+  --primary-color: #111111; 
+  --accent-color: #f3a712; 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0E0E0E;
     --foreground: #ededed;
+    --primary-color: #111111;
+    --accent-color: #f3a712;
   }
 }
 
@@ -22,17 +26,71 @@ body {
   padding: 0;
 }
 
+/* Navbar Styling */
+.navbar {
+  background-color: var(--primary-color); 
+  color: white;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; 
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 2rem;
+  font-size: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover {
+  background-color: var(--accent-color); 
+  color: var(--primary-color); 
+  border-radius: 5px;
+}
+
+.navbar a:active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
 /* Projects Section */
 .projects-container {
   padding: 2rem;
   text-align: center;
+  margin-top: 80px; 
 }
 
 .page-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: var(--foreground);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projects-subtitle {
+  font-size: 1.25rem;
+  color: var(--foreground);
+  margin-bottom: 3rem;
 }
 
 .projects-section {
@@ -45,8 +103,8 @@ body {
 .projects-row {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap; /* Added wrap for responsiveness */
-  justify-content: center; /* Center align cards */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-card {
@@ -54,14 +112,10 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 500px; /* Adjust width for larger screens */
+  width: 300px;
   text-align: center;
-  transition: transform 0.3s ease; /* Smooth transition on hover */
-}
-
-.project-image-container {
-  position: relative;
-  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .project-image {
@@ -69,10 +123,6 @@ body {
   width: 100%;
   height: auto;
   transition: transform 0.3s ease;
-}
-
-.project-image-container:hover .project-image {
-  transform: scale(1.1); /* Zoom effect on hover */
 }
 
 .project-card-desc {
@@ -85,7 +135,7 @@ body {
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #161616;
+  background-color: var(--accent-color);
   color: white;
   border: none;
   border-radius: 50px;
@@ -94,7 +144,7 @@ body {
 }
 
 .project-button:hover {
-  background-color: #0056b3;
+  background-color: #e58e0d; 
 }
 
 .coming-soon {
@@ -109,17 +159,17 @@ body {
   text-align: center;
 }
 
-/* Responsive Styles */
+/* responsive */
 @media (max-width: 1024px) {
   .projects-row {
     flex-direction: row;
     justify-content: space-between;
-    gap: 1.5rem; /* Adjust gap for medium screens */
+    gap: 1.5rem;
   }
 
   .project-card {
     width: 100%;
-    max-width: 400px; /* Set max-width for medium screens */
+    max-width: 400px;
   }
 }
 
@@ -131,33 +181,33 @@ body {
 
   .project-card {
     width: 90%;
-    max-width: 350px; /* Set max-width for mobile screens */
+    max-width: 350px;
   }
 
   .page-title {
-    font-size: 2rem; /* Reduce title size for mobile */
+    font-size: 2rem;
   }
 
   .project-button {
-    font-size: 0.9rem; /* Adjust button font size for mobile */
-    padding: 8px 16px; /* Adjust button padding for mobile */
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 
   .project-card-desc {
-    font-size: 1.1rem; /* Adjust description font size for mobile */
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
   .project-button {
-    font-size: 0.8rem; /* Further adjust for very small screens */
-    padding: 6px 14px; /* Further adjust padding */
+    font-size: 0.8rem;
+    padding: 6px 14px;
   }
 }
 
 .footer {
-  background-color: var(--foreground);
-  color: var(--background);
+  background-color: var(--primary-color);
+  color: var(--foreground);
   text-align: center;
   padding: 10px;
 }
