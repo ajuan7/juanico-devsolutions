@@ -6,7 +6,7 @@
   --background: #ffffff;
   --foreground: #0E0E0E;
   --primary-color: #111111; /* Dark luxury color */
-  --accent-color: #f3a712; /* Gold accent color for luxury */
+  --accent-color: blue; /* Gold accent color for luxury */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +14,7 @@
     --background: #0E0E0E;
     --foreground: #ededed;
     --primary-color: #111111;
-    --accent-color: #f3a712;
+    --accent-color: rgb(35, 93, 218);
   }
 }
 
@@ -144,7 +144,7 @@ body {
 }
 
 .project-button:hover {
-  background-color: #e58e0d; 
+  background-color: #0d51e5; 
 }
 
 .coming-soon {
@@ -217,6 +217,9 @@ body {
   padding: 2rem;
   text-align: center;
   margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50rem;
 }
 
 .project-title {

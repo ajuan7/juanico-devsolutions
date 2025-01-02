@@ -21,7 +21,7 @@ export default function Home() {
           <p className="text-sm text-gray-500">Your Vision, Our Code.</p>
         </header>
 
-        <section className="text-center sm:text-left px-40">
+        <section className="text-center sm:text-left px-8 sm:px-40">
           <h2 className="text-xl font-semibold mb-2">About Us</h2>
           <p className="text-sm text-gray-700">
             At Juanico DevSolutions, we specialize in delivering tailored software development, seamless API integration, and scalable SaaS products. 
