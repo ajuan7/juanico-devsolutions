@@ -5,8 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #0E0E0E;
-  --primary-color: #111111; 
-  --accent-color: #f3a712; 
+  --primary-color: #111111; /* Dark luxury color */
+  --accent-color: #f3a712; /* Gold accent color for luxury */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +28,7 @@ body {
 
 /* Navbar Styling */
 .navbar {
-  background-color: var(--primary-color); 
+  background-color: var(--primary-color);
   color: white;
   padding: 15px 40px;
   position: fixed;
@@ -37,7 +37,7 @@ body {
   z-index: 100;
   width: 100%;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -63,8 +63,8 @@ body {
 }
 
 .navbar a:hover {
-  background-color: var(--accent-color); 
-  color: var(--primary-color); 
+  background-color: var(--accent-color);
+  color: var(--primary-color);
   border-radius: 5px;
 }
 
@@ -77,7 +77,7 @@ body {
 .projects-container {
   padding: 2rem;
   text-align: center;
-  margin-top: 80px; 
+  margin-top: 80px; /* To avoid overlap with fixed navbar */
 }
 
 .page-title {
@@ -159,7 +159,7 @@ body {
   text-align: center;
 }
 
-/* responsive */
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .projects-row {
     flex-direction: row;
@@ -206,8 +206,38 @@ body {
 }
 
 .footer {
-  background-color: var(--primary-color);
+  background-color: var(--background);
   color: var(--foreground);
   text-align: center;
   padding: 10px;
+}
+
+
+.project-details-container {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.project-heading {
+  font-size: 1.5rem;
+  font-weight:lighter;
+  text-align: left;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--foreground);
+  margin-bottom: 3rem;
+  line-height: 1.6;
 }

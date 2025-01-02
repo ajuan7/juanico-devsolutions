@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Head from "next/head";  
-import Link from "next/link"; 
+import Link from "next/link";  
+import Head from "next/head";
 
 export default function Projects() {
   return (
@@ -12,12 +12,13 @@ export default function Projects() {
       {/* Navbar */}
       <nav className="navbar">
         <ul>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/projects">Projects</Link></li>
-          <li><Link href="#contact">Contact</Link></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
+      {/* Projects Section */}
       <main className="projects-container">
         <h1 className="page-title">Our Projects</h1>
         <p className="projects-subtitle">
@@ -29,22 +30,23 @@ export default function Projects() {
             {/* Project 1 - Automated Scheduling System */}
             <div className="project-card">
               <Link href="/projects/project_1">
-                <Image 
-                src="/project-1/Main-Page.png" 
-                alt="Project 1"
-                width={800}
-                height={600}
-                className="project-image"
-                />
-                <p className="project-card-desc">AUTOMATED SCHEDULING SYSTEM</p>
-                <button className="project-button">View Project</button>
+                  <Image 
+                    src="/project-1/Main-Page.png" 
+                    alt="Project 1"
+                    width={700}
+                    height={500}
+                    className="project-image"
+                  />
+                  <p className="project-card-desc">AUTOMATED SCHEDULING SYSTEM</p>
+                  <button className="project-button">View Project</button>
               </Link>
             </div>
-            {/* Coming Soon - Project 2 */}
+
+            {/* Coming Soon Projects */}
             <div className="project-card coming-soon">
               <h3>Coming Soon</h3>
             </div>
-            {/* Coming Soon - Project 3 */}
+
             <div className="project-card coming-soon">
               <h3>Coming Soon</h3>
             </div>
@@ -54,7 +56,7 @@ export default function Projects() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>© 2025 Juanico DevSolutions</p>
+        <p>© 2025 Juanico DevSolutions | All rights reserved</p>
       </footer>
     </div>
   );
