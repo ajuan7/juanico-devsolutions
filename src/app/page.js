@@ -1,5 +1,7 @@
 import Image from "next/image";
-import Head from "next/head";  // Import the Head component
+import Head from "next/head";  
+import Link from "next/link"; 
+
 import './styles.css';
 
 export default function Home() {
@@ -19,7 +21,7 @@ export default function Home() {
           <p className="text-sm text-gray-500">Your Vision, Our Code.</p>
         </header>
 
-        <section className="text-center sm:text-left px-40">
+        <section className="text-center sm:text-left px-8 sm:px-40">
           <h2 className="text-xl font-semibold mb-2">About Us</h2>
           <p className="text-sm text-gray-700">
             At Juanico DevSolutions, we specialize in delivering tailored software development, seamless API integration, and scalable SaaS products. 
@@ -28,12 +30,12 @@ export default function Home() {
         </section>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
+          <Link
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-blue-600 text-white gap-2 hover:bg-blue-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="#services"
+            href="/projects"
           >
-            Our Services
-          </a>
+            Projects
+          </Link>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
             href="#contact"
@@ -72,7 +74,7 @@ export default function Home() {
             width={32}
             height={32}
           />
-          Explore Services
+          View Projects
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

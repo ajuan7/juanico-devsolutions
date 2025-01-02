@@ -5,12 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #0E0E0E;
+  --primary-color: #111111; /* Dark luxury color */
+  --accent-color: blue; /* Gold accent color for luxury */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0E0E0E;
     --foreground: #ededed;
+    --primary-color: #111111;
+    --accent-color: rgb(35, 93, 218);
   }
 }
 
@@ -18,4 +22,225 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 2rem;
+  font-size: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.navbar a:active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Projects Section */
+.projects-container {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 80px; /* To avoid overlap with fixed navbar */
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.projects-subtitle {
+  font-size: 1.25rem;
+  color: var(--foreground);
+  margin-bottom: 3rem;
+}
+
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.projects-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #292929;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-image {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.project-card-desc {
+  font-size: 1.25rem;
+  color: var(--foreground);
+  margin-top: 10px;
+}
+
+.project-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project-button:hover {
+  background-color: #0d51e5; 
+}
+
+.coming-soon {
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #888;
+  height: 300px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .projects-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .project-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .project-card-desc {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-button {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}
+
+.footer {
+  background-color: var(--background);
+  color: var(--foreground);
+  text-align: center;
+  padding: 10px;
+}
+
+
+.project-details-container {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50rem;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.project-heading {
+  font-size: 1.5rem;
+  font-weight:lighter;
+  text-align: left;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--foreground);
+  margin-bottom: 3rem;
+  line-height: 1.6;
 }
