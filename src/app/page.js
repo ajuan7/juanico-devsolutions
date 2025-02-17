@@ -25,7 +25,7 @@ export default function Home() {
           <h2 className="text-xl font-semibold mb-2">About Us</h2>
           <p className="text-sm text-gray-700">
             At Juanico DevSolutions, we specialize in delivering tailored software development, seamless API integration, and scalable SaaS products. 
-            Let's bring your vision to life with innovative, secure, and efficient solutions.
+            Let's bring your vision to life with innovative, secure, and efficient solutions. 
           </p>
         </section>
 
@@ -38,7 +38,7 @@ export default function Home() {
           </Link>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="#contact"
+            href="/contact"
           >
             Contact Us
           </a>
@@ -48,19 +48,19 @@ export default function Home() {
       <footer className="flex gap-6 flex-wrap items-center justify-center mt-auto">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://github.com/ajuan7"
+          href="https://instagram.com/juanicodevsolutions"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             aria-hidden
             className="dark:invert"
-            src="/github-icon.svg"
-            alt="GitHub icon"
+            src="/instagram-icon.svg"
+            alt="Instagram icon"
             width={32}
             height={32}
           />
-          View Our Code
+          Our Instagram
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -78,7 +78,7 @@ export default function Home() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="#contact"
+          href="/contact"
         >
           <Image
             aria-hidden

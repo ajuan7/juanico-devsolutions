@@ -16,11 +16,11 @@ export const metadata = {
   title: "Juanico DevSolutions",
   description: "Your Vision, Our Code.",
   icons: {
-    icon: "JUANICO-2.png", 
+    icon: "JUANICO-3.ico", 
   },
-  keywords: "software development, API integration, SaaS products, Juanico DevSolutions, Angelo Juanico",
+  keywords: "software development, API integration, SaaS products, Juanico DevSolutions, Angelo Juanico, Angelo, Juanico",
   author: "Angelo Juanico",
-  ogImage: "/JUANICO-2.png",
+  ogImage: "/JUANICO-3.ico",
   ogTitle: "Juanico DevSolutions",
   ogDescription: "Juanico DevSolutions - Your Vision, Our Code.",
 };
@@ -32,7 +32,21 @@ export default function RootLayout({ children }) {
         <meta name="description" content="Your Vision, Our Code." />
         <meta name="author" content="Angelo Juanico" />
         <link rel="icon" href="/JUANICO-2.png" />
-
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Angelo Juanico",
+              "jobTitle": "Software Developer",
+              "url": "https://yourdomain.com",
+              "sameAs": [
+                "https://linkedin.com/in/angelojuanico",
+                "https://github.com/ajuan7"
+              ]
+            }
+          `}
+        </script>
       </head>
       
       <body

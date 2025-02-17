@@ -14,7 +14,7 @@ export default function Projects() {
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -56,7 +56,7 @@ export default function Projects() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>© 2025 Juanico DevSolutions | All rights reserved</p>
+        <p>© 2025 Juanico DevSolutions, Angelo Juanico | All rights reserved</p>
       </footer>
     </div>
   );
